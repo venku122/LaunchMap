@@ -1,7 +1,7 @@
 'use strict'
 var info;
 var url;
-
+var allLaunches;
  function loadRocket() {
 
   // url = "https://launchlibrary.net/1.1/launch/next/5";
@@ -94,7 +94,7 @@ var url;
 			return; // Bail out
 		}
 
-    var allLaunches = obj.launches;
+    allLaunches = obj.launches;
     updateList(allLaunches);
     clearMarkers();
     for( var i = 0; i < allLaunches.length; i++) {

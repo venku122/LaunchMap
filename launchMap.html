@@ -19,10 +19,19 @@
 
   #mapDiv {
 
-    height: 500px;
+    height: 300px;
+    width: 60%;
     border: 1px solid black;
+    float: left;
+    clear:both;
   }
-#content, #infoBox, #controlBox{
+  #controlBox {
+    border: 1px solid black;
+    height: 300px;
+    margin-left: 60%;
+    size: 150%;
+  }
+#content, #infoBox, {
       border: 1px solid black;
       height: 100px;
 
@@ -32,14 +41,7 @@
     float: left;
     clear:both;
   }
-  #controlBox {
-    margin-left: 60%;
-    size: 150%;
-  }
 
-  #content {
-
-  }
   select {
     width:100px;
     overflow:hidden;
@@ -56,33 +58,31 @@
 <body>
   <h1>Rocket Maps</h1>
   <div id="mapDiv"></div>
-  <div id="content">
-    <div id= "infoBox">This is info</div>
-    <div id= "controlBox">
-      <select id = "timeframe">
-      	<option value="All">All Launches</option>
-      	<option value="Future">Future Launches</option>
-      	<option value="Past">Past Launches</option>
-      	<option value="Today">Today's Launches</option>
-      	<option value="Last Month">Last Month's Launches</option>
-      	<option value="This Month">This Month's Launches</option>
-      	<option value="Next Month">Next Month's Launches</option>
-      </select>
-      <select id = "agency">
-      	<option value="All">All Agencies</option>
-      </select>
-      <select id = "family">
-      	<option value="All">All Rockets</option>
-      </select>
-      <select id = "types">
-      	<option value="All">All Mission Types</option>
-      </select>
-      <input type="number" name="limit" value = "100" min="0" max="10000" step = "5">
-      <button type="button" id="search">Get Launches!</button>
-    </div>
-    <div id="list">
-      <h2>List of Launches</h2>
+  <div id= "controlBox">
+    <select id = "timeframe">
+      <option value="All">All Launches</option>
+      <option value="Future">Future Launches</option>
+      <option value="Past">Past Launches</option>
+      <option value="Today">Today's Launches</option>
+      <option value="Last Month">Last Month's Launches</option>
+      <option value="This Month">This Month's Launches</option>
+      <option value="Next Month">Next Month's Launches</option>
+    </select>
+    <select id = "agency">
+      <option value="All">All Agencies</option>
+    </select>
+    <select id = "family">
+      <option value="All">All Rockets</option>
+    </select>
+    <select id = "types">
+      <option value="All">All Mission Types</option>
+    </select>
+    <input type="number" name="limit" value = "100" min="0" max="10000" step = "5">
+    <button type="button" id="search">Get Launches!</button>
   </div>
-  </div>
+  <div id= "infoBox">This is info</div>
+  <div id="list">
+    <h2>List of Launches</h2>
+</div>
 </body>
 </html>
